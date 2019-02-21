@@ -1,0 +1,18 @@
+{% extends 'base.html'%}
+<!-- Content block -->
+{% block content %} {% for new in article %}
+<div class="col-md-12 articles-details">
+    <a href={{new.url}} target="_blank">
+        <img src={{new.urlToImage}} alt="IMAGE LOADING..." class="img-responsive">
+    </a>
+    <div class="words">
+        <h4 class="text-bold"> {{new.title}} </h4>
+        <p class="small">- {{new.author}} </p>
+        <p class="small">Posted on {{new.publishedAt}}</p>
+        <hr>
+        <p> {{new.description}}...
+            <a href={{new.url}} target="_blank">read more</a>
+        </p>
+    </div>
+</div>
+{% endfor %} {% endblock %}

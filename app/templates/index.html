@@ -1,0 +1,20 @@
+ {% extends 'base.html'%} {% import 'macros.html' as macro%} {% block content %} {% for source in popular %}
+<div class="col-md-3  single-source">
+    <div class="row hh">
+        <div class="col-md-6  source-name  ">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4>{{ source.name }}</h4><br>
+                </div>
+                <div class="panel-body">
+                    {{source.description|truncate(150)}}<br>
+                </div>
+                <div class="panel-footer">
+                    <a href="/source/{{source.id}}">Read Articles</a>
+                </div>
+                <br>
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %} {% endblock%}

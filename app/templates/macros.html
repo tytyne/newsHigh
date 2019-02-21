@@ -1,0 +1,10 @@
+{% macro displaynewList(new_list) %} {% for new in new_list %}
+<div class="col-xs-12 col-sm-4 col-md-2 col-lg-2  new-card">
+    <img src="{{  new.poster }}" alt="{{  new.title }} poster" class="img-responsive">
+    <li class="text-center">
+        <a href="/ new/{{ new.id}}">
+            {{ new.title|truncate(10)}}</a>
+    </li>
+</div>
+
+{% endfor %} {% endmacro %}
