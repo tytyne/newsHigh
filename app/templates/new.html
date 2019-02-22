@@ -3,7 +3,7 @@
 {% block content %} {% for new in article %}
 <div class="col-md-6 articles-details">
     <a href={{new.url}} target="_blank">
-        <img src={{new.urlToImage}} alt="IMAGE LOADING..." class="img-responsive">
+        <img src="{{new.urlToImage}}" alt="IMAGE LOADING..." class="img-responsive">
     </a>
     <div class="words">
         <h4 class="text-bold"> {{new.title}} </h4>
