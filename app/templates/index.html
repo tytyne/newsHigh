@@ -5,21 +5,24 @@
 {% block styles%} {{ super() }}
 <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}"> {% endblock %}
 <!-- Content block -->
-
-<div class="col-md-4  single-source">
-    <div class="row hh">
-        <div class="col-md-12  source-name  ">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4>{{ source.name }}</h4><br>
+<div class="jumbotron">
+    <div class="container">
+        <div class="col-md-4  single-source">
+            <div class="row hh">
+                <div class="col-md-12  source-name  ">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4>{{ source.name }}</h4><br>
+                        </div>
+                        <div class="panel-body">
+                            {{source.description|truncate(150)}}<br>
+                        </div>
+                        <div class="panel-footer">
+                            <a href="/source/{{source.id}}">Read Articles</a>
+                        </div>
+                        <br>
+                    </div>
                 </div>
-                <div class="panel-body">
-                    {{source.description|truncate(150)}}<br>
-                </div>
-                <div class="panel-footer">
-                    <a href="/source/{{source.id}}">Read Articles</a>
-                </div>
-                <br>
             </div>
         </div>
     </div>
