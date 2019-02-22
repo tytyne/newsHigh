@@ -85,36 +85,17 @@ def process_articles( new_list):
         id = new_item.get('id')
         title =  new_item.get('title')
         author=  new_item.get('author')
-        poster = new_item.get('urlToImage')
+        url=new_item.get('url')
+        urlToImage = new_item.get('urlToImage')
         description =  new_item.get('description')
         publishedAt =  new_item.get('publishedAt')
         content =  new_item.get('content')
 
-        if poster:
-            new_object = New(id,title, author,poster, description,  publishedAt,content)
+        if urlToImage:
+            new_object = New(id,title, author,url,urlToImage, description,  publishedAt,content)
             new_articles.append( new_object)
 
     return new_articles
 
 
 
-# def get_new(id):
-#     get_new_details_url = base_url.format(id, api_key)
-
-#     with urllib.request.urlopen(get_new_details_url) as url:
-#         new_details_data = url.read()
-#         new_details_response = json.loads(new_details_data)
-
-#         new_object = None
-#         if new_details_response:
-#             id = new_details_response.get('id')
-#             title = new_details_response.get(' title')
-#             author = new_details_response.get('author')
-#             poster = movie_details_response.get('poster_path')
-#             description = new_details_response.get(' description')
-#             publishedAt = new_details_response.get('publishedAt')
-#             content = new_details_response.get(' content')
-
-#             new_object = new(id, title, author,poster,description, publishedAt, content)
-
-#     return new_object

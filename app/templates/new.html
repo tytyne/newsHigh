@@ -1,7 +1,7 @@
 {% extends 'base.html'%}
 <!-- Content block -->
 {% block content %} {% for new in article %}
-<div class="col-md-6 articles-details">
+<div class="col-md-2 articles-details">
     <a href={{new.url}} target="_blank">
         <img src="{{new.urlToImage}}" alt="IMAGE LOADING..." class="img-responsive">
     </a>
@@ -11,7 +11,7 @@
         <p class="small">Posted on {{new.publishedAt}}</p>
         <hr>
         <p> {{new.description}}...
-            <a href={{new.url}} target="_blank">read more</a>
+            <a href="{{new.url}}" target="_blank">read more</a>
         </p>
     </div>
 </div>
